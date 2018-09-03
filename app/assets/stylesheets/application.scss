@@ -1,0 +1,178 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require font-awesome 
+ */
+
+@mixin mintyo {
+	font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+
+@mixin flex {
+	overflow: hidden; display: flex; justify-content: space-between; flex-wrap: wrap;
+}
+body, div, h1, h2, h3, ul, li, dl, dd, dt, img, hr, iframe, table, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-weight: normal;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+table {
+    border-collapse: collapse;
+    boder-spacing: 0;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-style: normal;
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    font-size: 14px;
+}
+
+a {
+	color: #fff; transition: .5s;
+	&:hover {
+		color: #f00;
+	}
+}
+
+ul {
+	list-style-type: none;
+}
+
+.center {
+	text-align: center;
+}
+
+/* common */
+img {
+	max-width: 100%; height: auto;
+}
+
+div.flex_box {
+	@include flex;
+	> div {
+		width: 48%;
+	}
+	> div.thcal {
+		width: 32%;
+	}
+}
+
+div.align_start {
+	align-items: flex-start;
+}
+
+h1 {
+	@include mintyo; 
+}
+
+h2 {
+	@include mintyo; font-size: 25px;  margin-bottom: 30px;
+}
+
+h3 {
+	@include mintyo; font-size: 20px; margin-bottom: 10px;
+}
+
+.right {
+	text-align: right;
+}
+
+/* html */
+html {
+	height: 100%
+}
+
+/* body */
+body {
+	position: relative; height: 100%;
+}
+
+/* header */
+header {
+	width: 100%; height: 100vh; position: absolute; z-index: -1;
+	h1 {
+		text-align: right;
+		img {
+			width: 70%;
+		}
+	}
+}
+
+/* wrapper */
+div.wrapper {
+	@include flex;
+}
+
+section.main {
+	width: 60%; margin: 5% auto 0;
+}
+
+/* nav */
+nav.mainNavi {
+	width: 25%; text-align: right; margin-top: 10%;
+	ul {
+		li {
+			padding: 10px 20px; box-sizing: border-box; margin-bottom: 10px;
+			a {
+				text-decoration: none; @include mintyo; font-size: 150%; transition: .5s;
+				&:hover {
+					color: #f00;
+				}
+			}
+		}
+	}
+}
+
+/* footer */
+footer {
+	margin-top: 40px; text-align: center; width: 100%; padding-bottom: 10px; box-sizing: border-box;
+	span.footer {
+		@include mintyo;
+	}
+}
+
+//admin
+div.wrapper {
+	> div.admin {
+		text-align: center;
+		div.actions {
+			margin: 10px 0;
+		}
+	}
+}
+
+/* animation */
+.animation {
+	animation-fill-mode: both; animation-duration: .5s;
+}
+
+.fadeOut {
+	animation-name: fadeOut;
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}

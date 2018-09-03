@@ -1,0 +1,38 @@
+<div class="flex_box align_start">
+  <div class="tweet_area animation">
+    <span class="tweet_close"><%= fa_icon "times" %></span>
+    <a id="t-time" class="twitter-timeline" data-height="500" href="https://twitter.com/fromVampireRose" data-widget-id="514963607709163520">Tweets by @fromVampireRose</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+  </div>
+  <div class="list_area">
+    <article class="news animation">
+      <span class="news_close"><%= fa_icon "times" %></span>
+      <h2>News</h2>
+      <ul class="news_list">
+        <% if @news.present? %>
+          <li>
+            <span class="update_date"><%= @news.created_at.strftime("%m月%d日") %></span>
+            <a href="news/<%= @news.id %>"><%= @news.title %></a>
+          </li>
+        <% else %>
+          <li>
+            まだ投稿はありません 
+          </li>
+        <% end %>
+      </ul>
+    </article>
+    <article class="lives animation">
+      <span class="lives_close"><%= fa_icon "times" %></span>
+      <h2>Next Schedule</h2>
+      <ul class="lives_list">
+        <% if @lives.present? %>
+          <li>
+            <span class="schedule_date"><%= @lives.date.strftime("%m月%d日") %></span>
+            <a href="schedules/<%= @lives.id %>"><%= @lives.place %></a>
+          </li>
+        <% end %>
+      </ul>
+    </article>
+  </div>
+</div>

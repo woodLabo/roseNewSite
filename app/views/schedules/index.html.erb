@@ -1,0 +1,31 @@
+<h2>SCHEDULE</h2>
+<section class="schedule_section">
+  <h3>LIVE</h3>
+  <% if @live.present? %>
+    <% @live.each do |live| %>
+      <ul>
+        <li>
+          <span class="schedule_date"><%= live.date.strftime("%m月%d日") %></span>
+          <span><%= link_to(live.place, {:action => :show, :id => live.id}) %></span>
+        </li>
+      </ul>
+    <% end %>
+  <% else %>
+    <p>現在予定はありません</p>
+  <% end %>
+</section>
+<section class="schedule_section">
+  <h3>昼・夜会</h3>
+  <% if @meet.present? %>
+    <% @meet.each do |meet| %>
+      <ul>
+        <li>
+          <span class="schedule_date"><%= meet.date %></span>
+          <span><%= link_to(meet.place, {:action => :show, :id => meet.id}) %></span>
+        </li>
+      </ul>
+    <% end %>
+  <% else %>
+    <p>現在予定はありません</p>
+  <% end %>
+</section>

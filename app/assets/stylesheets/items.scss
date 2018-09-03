@@ -1,0 +1,30 @@
+// Place all the styles related to the items controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+div.item_nav {
+	margin-bottom: 40px;
+	> div {
+		text-align: center; font-size: 15px; cursor: pointer; border: 1px solid #fff; padding: 5px 0; transition: .5s;
+		&:current {
+			background: #f00;
+		}
+		&:hover {
+			background: #f00;
+		}
+	}
+}
+
+section.items_section {
+	div.flex_box {
+		margin-bottom: 40px;
+		div.thcal {
+			text-align: center; margin-bottom: 20px;
+			img {
+				width: 300px;
+			}
+		}
+		&:after {
+			content: ""; display: block; width: 32%;
+		}
+	}
+}

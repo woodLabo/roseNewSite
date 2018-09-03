@@ -1,0 +1,46 @@
+<h2>ITEM</h2>
+<div class="flex_box item_nav">
+  <div class="thcal">CD</div>
+  <div class="thcal">DVD</div>
+  <div class="thcal">GOODS</div>
+</div>
+<section class="items_section">
+  <h3>CD</h3>
+  <div class="flex_box">
+    <% @item_cd.each do |i| %>
+      <div class="thcal">
+        <%= image_tag("/images/#{i.img}") %>
+        <p><%= i.release_number %><br><%= i.title %><br>¥<%= i.price.to_s(:delimited) %></p>
+      </div>
+    <% end %>
+  </div>
+</section>
+<section class="items_section">
+  <h3>DVD</h3>
+  <div class="flex_box">
+    <% @item_dvd.each do |i| %>
+      <div class="thcal">
+        <%= image_tag("/images/#{i.img}") %>
+        <p><%= i.release_number %><br><%= i.title %><br>¥<%= i.price.to_s(:delimited) %></p>
+      </div>
+    <% end %>
+  </div>
+</section>
+<section class="items_section">
+  <h3>GOODS</h3>
+  <div class="flex_box">
+    <% @good.each do |i|%>
+      <div class="thcal">
+        <%= image_tag("/images/#{i.img}") %>
+        <p><%= i.title %><br>
+        <% if i.price.present? %>
+          ¥<%= i.price.to_s(:delimited) %>
+        <% end %>
+        </p>
+      </div>
+    <% end %>
+  </div>
+</section>
+<p class="center">
+  <%= link_to("お問い合わせはこちらから", :action => :contact) %>
+</p>

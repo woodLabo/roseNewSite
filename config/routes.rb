@@ -1,0 +1,21 @@
+Rails.application.routes.draw do
+  root to: 'mains#index'
+  devise_for :users
+  devise_scope :user do
+    get "admin" => "devise/sessions#new"
+  end
+
+  #root to: "home#index"
+  get "what" => "mains#what"
+  resources :news 
+  resources :schedules
+  resources :discographies
+  resources :items do
+    collection do 
+      get "contact" => "items#contact"
+    end
+  end
+  resources :contacts
+  resources :clans
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+end

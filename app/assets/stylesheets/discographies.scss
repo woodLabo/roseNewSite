@@ -1,0 +1,40 @@
+// Place all the styles related to the discographies controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+h2 {
+	span.release_number {
+		display: block; font-size: 80%;
+	}
+}
+section.release_types {
+	margin-bottom: 20px;
+	h2 {
+		font-size: 20px; margin-bottom: 10px;
+	}
+	div.thcal {
+		margin-bottom: 20px; text-align: center;
+		a {
+			transform: .5s; display: block;
+			&:hover {
+				opacity: .8;
+			}
+		}
+		img {
+			width: 300px;
+		}
+	}
+}
+div.disco_section {
+	background: rgba(0,0,0,.7);
+	div.disco_img {
+		text-align: center;
+		img {
+			width: 300px;
+		}
+	}
+	div.disco_detail {
+		span.price {
+			display: inline-block; margin-left: 1em;
+		}
+	}
+}

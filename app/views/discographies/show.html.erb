@@ -1,0 +1,21 @@
+<h2><span class="release_number"><%= @disco.release_number %></span>「<%= @disco.title %>」</h2>
+<div class="flex_box disco_section">
+  <div class="disco_img">
+    <%= image_tag("/images/#{@disco.img}") %>
+  </div>
+   <div class="disco_detail">
+     <%= simple_format(@disco.list) %>
+     <p>
+     <% if @disco.release_date.present? %>
+       <%= @disco.release_date.strftime("%Y年%m月%d日") %>リリース<br>
+     <% end %>
+     <%= @disco.jan %><span class="price">¥<%= @disco.price.to_s(:delimited) %></span>
+     </p>
+     <% if @disco.detail.present? %>
+       <p><%= @disco.detail %></p>
+     <% end %>
+  </div>
+</div>
+<p>
+  <%= link_to("戻る", :back) %>
+</p>

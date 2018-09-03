@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vampirerose</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <h1><%= image_tag("/images/logo.jpg") %></h1>
+    </header>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <div class="wrapper">
+      <% unless controller.controller_name == "sessions" || controller.controller_name == "registrations" %>
+        <%= render :partial => "/shared/sidebar" %>
+      <% end %>
+      <section class="main <% if controller.controller_name == "sessions" || controller.controller_name == "registrations"%>admin<% end %>"> 
+        <%= yield %>
+      </section>
+    </div>
+    <footer>
+      <span class="footer">(C)copyright VAMPIRE ROSE 2014- all rights reserved.</span>
+    </footer>
+  </body>
+</html>

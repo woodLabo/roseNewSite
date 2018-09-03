@@ -1,0 +1,53 @@
+<h2>CLAN OF BLOOD ROSE(血薔薇の一族)</h2>
+<section class="clan_section">
+  <h2>Gu</h2>
+  <ul>
+    <% @clan_gu.each do |i| %>
+      <li>
+        <dl>
+          <dt><%= i.name %></dt>
+          <dd><%= i.affiliation %></dd>
+        </dl>
+      </li>
+    <% end %>
+  </ul>
+</section>
+<section class="clan_section">
+  <h2>Ba</h2>
+  <ul>
+    <% @clan_ba.each do |i| %>
+      <li>
+        <dl>
+          <dt><%= i.name %></dt>
+          <dd><%= i.affiliation %></dd>
+        </dl>
+      </li>
+    <% end %>
+  </ul>
+</section>
+<section class="clan_section">
+  <h2>Dr</h2>
+  <ul>
+    <% @clan_dr.each do |i| %>
+      <li>
+        <dl>
+          <dt><%= i.name %></dt>
+          <dd><%= i.affiliation %></dd>
+        </dl>
+      </li>
+    <% end %>
+  </ul>
+</section>
+<section class="clan_section">
+  <h2>Other</h2>
+  <ul>
+    <% @clan_ot.each do |i| %>
+      <li>
+        <dl>
+          <dt><%= i.name %></dt>
+          <dd><%= i.affiliation %></dd>
+        </dl>
+      </li>
+    <% end %>
+  </ul>
+</section>

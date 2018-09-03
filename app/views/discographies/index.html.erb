@@ -1,0 +1,32 @@
+<h2>DISCOGRAPHY</h2>
+<section class="release_types">
+  <h2>Single</h2>
+  <div class="flex_box">
+    <% @single.each do |s| %>
+      <div class="thcal">
+        <%= link_to(image_tag("/images/#{s.img}"), {:action => :show, :id => s.id}) %>
+        
+      </div>
+    <% end %>
+  </div>
+</section>
+<section class="release_types">
+  <h2>Album</h2>
+  <div class="flex_box">
+    <% @album.each do |a| %>
+      <div class="thcal">
+        <%= link_to(image_tag("/images/#{a.img}"), {:action => :show, :id => a.id}) %>
+      </div>
+    <% end %>
+  </div>
+</section>
+<section class="release_types">
+  <h2>DVD</h2>
+  <div class="flex_box">
+    <% @dvd.each do |d| %>
+      <div class="thcal">
+        <%= link_to(image_tag("/images/#{d.img}"), {:action => :show, :id => d.id}) %>
+      </div>
+    <% end %>
+  </div>
+</section>

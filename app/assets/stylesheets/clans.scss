@@ -1,0 +1,19 @@
+// Place all the styles related to the clans controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+section.clan_section {
+	ul {
+		margin-bottom: 40px; margin-left: 1em;
+		li {
+			margin-bottom: 10px;
+		}
+	}
+	dl {
+		dt {
+			font-weight: bold; display: inline-block; width: 10em;
+		}
+		dd {
+			display: inline-block;
+		}
+	}
+}

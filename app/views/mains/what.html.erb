@@ -1,0 +1,16 @@
+<h2>説明しよう!!VAMPIRE ROSEとは</h2>
+<%= simple_format(@what.comment) %>
+<div class="flex_box what_details">
+  <div id="rose_pic">
+    <%= image_tag("/images/#{@what.img}") %>
+  </div>
+  <div class="details_box">
+    <ul class="details_list">
+      <li>NAME：<%= @what.name %></li>
+      <li>BIRTH：<%= @what.birth %></li>
+      <li>FROM：<%= @what.from %></li>
+      <li>HEIGHT：<%= @what.height %></li>
+      <li>BLOOD：<%= @what.blood %></li>
+    </ul>
+  </div>
+</div>
