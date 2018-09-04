@@ -15,7 +15,12 @@ Rails.application.routes.draw do
       get "contact" => "items#contact"
     end
   end
-  resources :contacts
+  resources :contacts do
+    collection do
+      post "ticket_conf" => "contacts#ticket_conf"
+      post "ticket_thanks" => "contacts#ticket_thanks"
+    end
+  end
   resources :clans
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

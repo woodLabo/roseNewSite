@@ -3,7 +3,7 @@ class ContactMailer < ApplicationMailer
 
   def contact_mail(user)
     @user = user  
-    mail(:to => @user.email,
+    mail(:to => "web.works.ms@gmail.com",
     :subject => "ホームページからお問い合わせがありました")
   end
 end

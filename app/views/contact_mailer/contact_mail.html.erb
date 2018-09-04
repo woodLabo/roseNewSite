@@ -5,8 +5,8 @@
 </head>
 <body>
   <%= @user.name %>様からお問い合わせです。
-  メールアドレス:
-  日程:
-  枚数:
+  メールアドレス: <%= @user.email %>
+  日程: <%= @user.date %>
+  枚数: <%= @user.count %>
 </body>
 </html>

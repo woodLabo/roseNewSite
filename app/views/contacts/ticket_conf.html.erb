@@ -1,0 +1,32 @@
+<h2>チケット予約確認</h2>
+<div class="contact_content">
+  <%= form_for @t_contact, :url => ticket_thanks_contacts_path do |i| %>
+    <dl class="contact_form">
+      <dt>お名前</dt>
+      <dd>
+      <%= i.hidden_field :name, :value => @name %>
+      <%= @name %>
+      </dd>
+      <dt>メールアドレス</dt>
+      <dd>
+      <%= i.hidden_field :email, :value => @email %>
+      <%= @email %>
+      </dd>
+      <dt>日程</dt>
+      <dd>
+      <%= i.hidden_field :date, :value => @date %>
+      <%= @date.to_date.strftime("%y年%m月%d日") %> <%= @place.place %>
+      </dd>
+      <dt>枚数</dt>
+      <dd>
+      <%= i.hidden_field :count, :value => @count %>
+      <%= @count %>枚
+      </dd>
+    </dl>
+    <div class="center">
+      <p>こちらの内容で間違いありませんか？</p>
+      <%= link_to("戻る", :action => :index) %>
+      <%= i.submit "送信" %>
+    </div>
+  <% end %>
+</div>

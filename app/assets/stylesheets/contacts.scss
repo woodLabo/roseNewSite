@@ -1,0 +1,33 @@
+// Place all the styles related to the contects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+div.contact_nav {
+	margin-bottom: 40px;
+	> div {
+		text-align: center; cursor: pointer; border: 1px solid #fff; font-size: 15px; padding: 5px 0; transition: .5s;
+		&:hover {
+			background: #f00;
+		}
+	}
+}
+
+div.contact_content {
+	background: rgba(0,0,0, .7); padding: 10px 0;
+	dl.contact_form {
+		dt, dd {
+			display: inline-block; vertical-align: top;
+		}
+		dt {
+			width: 25%; font-weight: bold;
+		}
+		dd {
+			width: 70%; margin-bottom: 20px;
+			input[type="text"], input[type="email"], textarea {
+				width: 80%;
+			}
+			input[type="number"] {
+				width: 4em;
+			}
+		}
+	}
+}

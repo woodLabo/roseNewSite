@@ -1,0 +1,31 @@
+ <%= form_for @t_contact, :url => ticket_conf_contacts_path, method: :post do |t| %>
+    <% if @schedule.present? %>
+      <dl class="contact_form">
+        <dt><%= t.label :name, "お名前"%></dt>
+        <dd><%= t.text_field :name, :value => @name %></dd>
+        <dt><%= t.label :email, "メールアドレス" %></dt>
+        <dd><%= t.email_field :email, :value => @email %></dd>
+        <dt>日程</dt>
+        <dd>
+        <% @schedule.each do |i| %>
+          <% if @date.present? %>
+            <% if @date.to_date == i.date %>
+              <%= t.radio_button :date, i.date, {:checked => true} %>
+            <% else %>
+              <%= t.radio_button :date, i.date, {} %>
+            <% end %>
+          <% else %>
+            <%= t.radio_button :date, i.date, {} %>
+          <% end %>
+          <%= t.label :date, i.date.strftime("%y年%m月%d日") + " " + i.place, value: i.date %><br>
+        <% end %>
+        </dd>
+        <dt><%= t.label :count, "枚数" %></dt>
+        <dd><%= t.number_field :count, :value => @count %></dd>
+      </dl>
+      <p class="center"><%= t.submit "確認画面" %></p>
+    <% else %>
+      現在予約出来る日程はありません
+    <% end %>
+
+<% end %>
