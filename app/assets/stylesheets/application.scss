@@ -159,6 +159,18 @@ div.wrapper {
 	}
 }
 
+
+//tab_change
+div.tab_nav_default {
+	background: #f00;
+}
+section.tab_contents {
+	display: none;
+	&.tab_content_default {
+		display: block;
+	}
+}
+
 /* animation */
 .animation {
 	animation-fill-mode: both; animation-duration: .5s;

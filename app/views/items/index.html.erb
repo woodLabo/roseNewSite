@@ -1,10 +1,10 @@
 <h2>ITEM</h2>
-<div class="flex_box item_nav">
-  <div class="thcal">CD</div>
+<div class="flex_box item_nav tab_nav">
+  <div class="thcal tab_nav_default">CD</div>
   <div class="thcal">DVD</div>
   <div class="thcal">GOODS</div>
 </div>
-<section class="items_section">
+<section class="items_section tab_contents tab_content_default">
   <h3>CD</h3>
   <div class="flex_box">
     <% @item_cd.each do |i| %>
@@ -15,7 +15,7 @@
     <% end %>
   </div>
 </section>
-<section class="items_section">
+<section class="items_section tab_contents">
   <h3>DVD</h3>
   <div class="flex_box">
     <% @item_dvd.each do |i| %>
@@ -26,7 +26,7 @@
     <% end %>
   </div>
 </section>
-<section class="items_section">
+<section class="items_section tab_contents">
   <h3>GOODS</h3>
   <div class="flex_box">
     <% @good.each do |i|%>

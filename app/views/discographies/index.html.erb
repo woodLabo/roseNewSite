@@ -4,8 +4,12 @@
   <div class="flex_box">
     <% @single.each do |s| %>
       <div class="thcal">
-        <%= link_to(image_tag("/images/#{s.img}"), {:action => :show, :id => s.id}) %>
-        
+        <%= image_tag("/images/#{s.img}") %>
+        <%= link_to({:action => :show, :id => s.id}) do %>
+          <div class="release_data">
+            <%= s.release_number %><br><%= s.title %>
+          </div>
+        <% end %>
       </div>
     <% end %>
   </div>
@@ -15,7 +19,12 @@
   <div class="flex_box">
     <% @album.each do |a| %>
       <div class="thcal">
-        <%= link_to(image_tag("/images/#{a.img}"), {:action => :show, :id => a.id}) %>
+        <%= image_tag("/images/#{a.img}") %>
+        <%= link_to({:action => :show, :id => a.id}) do %>
+          <div class="release_data">
+            <%= a.release_number %><br><%= a.title %></p>
+          </div>
+        <% end %>
       </div>
     <% end %>
   </div>
@@ -25,7 +34,12 @@
   <div class="flex_box">
     <% @dvd.each do |d| %>
       <div class="thcal">
-        <%= link_to(image_tag("/images/#{d.img}"), {:action => :show, :id => d.id}) %>
+      <%= image_tag("/images/#{d.img}") %>
+        <%= link_to({:action => :show, :id => d.id}) do %>
+          <div class="release_data">
+            <%= d.release_number %><br><%= d.title %></p>
+          </div>
+        <% end %>
       </div>
     <% end %>
   </div>

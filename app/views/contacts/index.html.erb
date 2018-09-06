@@ -1,13 +1,13 @@
 <h2>CONTACT</h2>
-<div class="flex_box contact_nav">
-  <div>チケット予約</div>
+<div class="flex_box contact_nav tab_nav">
+  <div class="tab_nav_default">チケット予約</div>
   <div>お問い合わせ</div>
 </div>
-<div class="contact_content">
+<section class="contact_content tab_contents tab_content_default">
   <%= render "form" %> 
-</div>
+</section>
 
-<div class="contact_content">
+<section class="contact_content tab_contents">
   <%= form_for @t_contact, :url => ticket_conf_contacts_path do |t| %>
     <dl class="contact_form">
       <dl>
@@ -21,4 +21,4 @@
     </dl>
     <p class="center"><%= t.submit "確認画面" %></p>
   <% end %>
-</div>
+</section> 
