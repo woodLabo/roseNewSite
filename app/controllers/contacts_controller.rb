@@ -2,7 +2,7 @@ class ContactsController < ApplicationController
 
   def index
     @t_contact = Contact.new
-    @schedule = Schedule.all.where(reservation: 1)
+    @schedule = Schedule.all.where(reservation: 0)
     @name = session[:name]
     @email = session[:email]
     @date = session[:date]

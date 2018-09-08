@@ -1,7 +1,7 @@
 <h2><span><%= @schedule.date.strftime("%m月%d日") %></span> <span><%= @schedule.place %></span></h2>
 <h2 class="title"><%= simple_format(@schedule.title) %></h2>
 <p class="mbp10">
-<span>OPEN：<%= @schedule.open_time %> / START：<%= @schedule.start_time %></span><br>
+<span>OPEN：<%= @schedule.open_time.strftime("%H:%M") %> / START：<%= @schedule.start_time.strftime("%H:%M") %></span><br>
 <span>前売り：¥<%= @schedule.adv.to_s(:delimited) %> / 当日：<%= @schedule.door.to_s(:delimited) %> ※Drink別</span>
 </p>
 
