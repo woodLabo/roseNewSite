@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   def index
-    @item_cd = Discography.where(types: 1..2) 
+    @item_cd = Discography.where(types: 1..2).order("id ASC")
     @item_dvd = Discography.where(types: 3) 
     @good = Item.all
   end

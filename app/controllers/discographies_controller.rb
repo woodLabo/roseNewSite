@@ -4,7 +4,7 @@ class DiscographiesController < ApplicationController
 
   def index
     @disco = Discography.all
-    @single = Discography.where(types: 1)
+    @single = Discography.where(types: 1).order("id ASC")
     @album = Discography.where(types: 2)
     @dvd = Discography.where(types: 3)
   end
