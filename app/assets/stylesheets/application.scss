@@ -127,7 +127,7 @@ section.main {
 
 /* nav */
 nav.mainNavi {
-	width: 25%; text-align: right; margin-top: 10%;
+	width: 25%; text-align: right; margin-top: 4%;
 	ul {
 		li {
 			padding: 10px 20px; box-sizing: border-box; margin-bottom: 10px;
@@ -137,6 +137,12 @@ nav.mainNavi {
 					color: #f00;
 				}
 			}
+		}
+	}
+	ul.sns_area {
+		margin-top: 20px;
+		li {
+			display: inline-block; text-align: center; width: 30%;
 		}
 	}
 }

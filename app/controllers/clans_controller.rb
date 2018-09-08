@@ -1,6 +1,6 @@
 class ClansController < ApplicationController
   def index
-    @clan_gu = Clan.all.where(part: 1).order("name DESC")
+    @clan_gu = Clan.all.where(part: 1)
     @clan_ba = Clan.all.where(part: 2)
     @clan_dr = Clan.all.where(part: 3)
     @clan_ot = Clan.all.where(part: 4)

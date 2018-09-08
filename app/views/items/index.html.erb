@@ -21,7 +21,7 @@
     <% @item_dvd.each do |i| %>
       <div class="thcal">
         <%= image_tag("/images/#{i.img}") %>
-        <p><%= i.release_number %><br><%= i.title %><br>¥<%= i.price %></p>
+        <p><%= i.release_number %><br><%= i.title %><br>¥<%= number_with_delimiter(i.price) %></p>
       </div>
     <% end %>
   </div>
@@ -34,7 +34,11 @@
         <%= image_tag("/images/#{i.img}") %>
         <p><%= i.title %><br>
         <% if i.price.present? %>
-          ¥<%= i.price %>
+          ¥<%= number_with_delimiter(i.price) %>
+        <% else %>
+          <% if i.status.present? %>
+            <%= i.status %>
+          <% end %>
         <% end %>
         </p>
       </div>
