@@ -30,7 +30,7 @@ class ContactsController < ApplicationController
       session[:email] = nil
       session[:date] = nil
       session[:count] = nil
-      ContactMailer.contact_mail(@t_contact).deliver
+      ContactMailer.contact_mail(@t_contact).deliver_later
     else
       render :index
     end
