@@ -20,7 +20,6 @@ class ContactsController < ApplicationController
     session[:email] = @email
     session[:date] = @date
     session[:count] = @count
-    session[:hoge] = "hoge"
   end
 
   def ticket_thanks 

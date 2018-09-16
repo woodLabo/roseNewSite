@@ -4,9 +4,9 @@
   <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
 </head>
 <body>
-  <%= @user.name %>様からお問い合わせです。
-  メールアドレス: <%= @user.email %>
-  日程: <%= @user.date %>
-  枚数: <%= @user.count %>
+  <%= @user.name %>様からお問い合わせです。<br>
+  メールアドレス: <%= @user.email %><br>
+  日程: <%= @user.date.strftime("%y年%m月%d日") %><br>
+  枚数: <%= @user.count %>枚
 </body>
 </html>
