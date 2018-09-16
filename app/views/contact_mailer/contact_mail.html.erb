@@ -6,7 +6,7 @@
 <body>
   <%= @user.name %>様からお問い合わせです。<br>
   メールアドレス: <%= @user.email %><br>
-  日程: <%= @user.date.strftime("%y年%m月%d日") %><br>
+  日程: <%= @user.date %><br>
   枚数: <%= @user.count %>枚
 </body>
 </html>
