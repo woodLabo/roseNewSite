@@ -1,15 +1,14 @@
 <section class="contact_content tab_contents tab_content_default">
-  <h2>お問い合わせ</h2>
-  <%= form_for @contact, :url => conf_contacts_path, method: :post do |t| %>
+<h2>ご購入に関するお問い合わせ</h2>
+ <%= form_for @contact, :url => item_conf_contacts_path, method: :post do |t| %>
     <dl class="contact_form">
       <dt><%= t.label :name, "お名前"%></dt>
       <dd><%= t.text_field :name, :value => @name %></dd>
       <dt><%= t.label :email, "メールアドレス" %></dt>
       <dd><%= t.email_field :email, :value => @email %></dd>
       <dt><%= t.label :details, "お問い合わせ内容" %></dt>
-      <dd><%= t.text_area :details, :size => "50x10", :value => @details %></dd>
+      <dd><%= t.text_area :details, :size => "50x10", :value => @details, :placeholder => "goodsの◯◯が欲しいです。等" %></dd>
     </dl>
     <p class="center"><%= t.submit "確認画面", :class => "contact_validates" %></p>
   <% end %>
 </section>
-

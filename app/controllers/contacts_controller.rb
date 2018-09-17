@@ -68,7 +68,33 @@ class ContactsController < ApplicationController
     end
   end
 
-  def other_conf
+  def item_contact
+    @contact = Contact.new
+    @name = session[:name]
+    @email = session[:email]
+    @details = session[:details]
+  end
+
+  def item_conf
+    @contact = Contact.new
+    @name = params[:contact][:name]
+    @email = params[:contact][:email]
+    @details = params[:contact][:details]
+    session[:name] = @name
+    session[:email] = @email
+    session[:details ] = @details
+  end
+
+  def item_thanks
+    @contact = Contact.new(main_contact_params)
+    if @contact.save
+        session[:name] = nil
+        session[:email] = nil
+        session[:details] = nil
+        ContactMailer.main_contact_mail(@contact).deliver_later
+      else
+        render :index
+      end  
   end
 
   private

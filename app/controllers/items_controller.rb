@@ -14,7 +14,4 @@ class ItemsController < ApplicationController
   def edit
   end
 
-  def contact
-    
-  end
 end
