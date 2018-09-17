@@ -1,0 +1,15 @@
+<h2>お問い合わせ</h2>
+<section class="contact_content tab_contents tab_content_default">
+  <%= form_for @contact, :url => conf_contacts_path, method: :post do |t| %>
+    <dl class="contact_form">
+      <dt><%= t.label :name, "お名前"%></dt>
+      <dd><%= t.text_field :name, :value => @name %></dd>
+      <dt><%= t.label :email, "メールアドレス" %></dt>
+      <dd><%= t.email_field :email, :value => @email %></dd>
+      <dt><%= t.label :details, "お問い合わせ内容" %></dt>
+      <dd><%= t.text_area :details, :size => "50x10", :value => @details %></dd>
+    </dl>
+    <p class="center"><%= t.submit "確認画面", :class => "contact_validates" %></p>
+  <% end %>
+</section>
+

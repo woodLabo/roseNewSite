@@ -1,0 +1,26 @@
+<h2>お問い合わせ確認</h2>
+<div class="contact_content">
+  <%= form_for @contact, :url => thanks_contacts_path do |i| %>
+    <dl class="contact_form">
+      <dt>お名前</dt>
+      <dd>
+      <%= i.hidden_field :name, :value => @name %>
+      <%= @name %>
+      </dd>
+      <dt>メールアドレス</dt>
+      <dd>
+      <%= i.hidden_field :email, :value => @email %>
+      <%= @email %>
+      </dd>
+      <dt>お問い合わせ内容</dt>
+      <dd>
+      <%= i.hidden_field :details, :value => @details %>
+      <%= simple_format(@details) %>
+      </dd>
+      <div class="center">
+        <p>こちらの内容で間違いありませんか？</p>
+        <%= link_to("戻る", :back) %>
+        <%= i.submit "送信" %>
+      </div>
+    <% end %>
+</div> 

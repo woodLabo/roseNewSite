@@ -1,4 +1,3 @@
 class Contact < ApplicationRecord
-  validates :name, :email, :date, :count, presence:true
-  
+  #validates :name, :email, :date, :count, presence: true
 end

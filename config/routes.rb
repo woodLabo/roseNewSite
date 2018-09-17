@@ -8,7 +8,11 @@ Rails.application.routes.draw do
   #root to: "home#index"
   get "what" => "mains#what"
   resources :news 
-  resources :schedules
+  resources :schedules do
+    collection do
+      get "reserve" => "schedules#reserve"
+    end
+  end
   resources :discographies
   resources :items do
     collection do 
@@ -19,6 +23,9 @@ Rails.application.routes.draw do
     collection do
       post "ticket_conf" => "contacts#ticket_conf"
       post "ticket_thanks" => "contacts#ticket_thanks"
+      get "main_contact" => "contacts#main_contact"
+      post "conf" => "contacts#conf"
+      post "thanks" => "contacts#thanks"
     end
   end
   resources :clans

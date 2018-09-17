@@ -14,6 +14,8 @@ section.schedule_section {
 	}
 }
 
-section.schedule_details {
-	margin-top: 40px;
+section {
+	&.schedule_details, &.schedule_reserve {
+		margin-top: 40px;
+	}
 }

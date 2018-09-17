@@ -23,7 +23,7 @@
         <dt><%= t.label :count, "枚数" %></dt>
         <dd><%= t.number_field :count, :value => @count %></dd>
       </dl>
-      <p class="center"><%= t.submit "確認画面" %></p>
+      <p class="center"><%= t.submit "確認画面", :class => "validate" %></p>
     <% else %>
       現在予約出来る日程はありません
     <% end %>

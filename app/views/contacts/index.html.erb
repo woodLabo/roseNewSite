@@ -1,24 +1,4 @@
-<h2>CONTACT</h2>
-<div class="flex_box contact_nav tab_nav">
-  <div class="tab_nav_default">チケット予約</div>
-  <div>お問い合わせ</div>
-</div>
+<h2>チケット予約</h2>
 <section class="contact_content tab_contents tab_content_default">
   <%= render "form" %> 
 </section>
-
-<section class="contact_content tab_contents">
-  <%= form_for @t_contact, :url => ticket_conf_contacts_path do |t| %>
-    <dl class="contact_form">
-      <dl>
-        <dt><%= t.label :name, "お名前" %></dt>
-        <dd><%= t.text_field :name %></dd>
-        <dt><%= t.label :email %></dt>
-        <dd><%= t.email_field :email %></dd>
-        <dt><%= t.label :details, "お問い合わせ内容" %></dt>
-        <dd><%= t.text_area :details, :size => "20x10" %></dd>
-      </dl>
-    </dl>
-    <p class="center"><%= t.submit "確認画面" %></p>
-  <% end %>
-</section> 
