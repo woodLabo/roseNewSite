@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+  <%= @user.name %>様からお問い合わせです。<br>
+  メールアドレス: <%= @user.email %><br>
+  ご購入に関するお問い合わせ内容<br>
+  <%= simple_format(@user.details) %>
+</body>
+</html>

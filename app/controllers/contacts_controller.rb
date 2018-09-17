@@ -91,7 +91,7 @@ class ContactsController < ApplicationController
         session[:name] = nil
         session[:email] = nil
         session[:details] = nil
-        ContactMailer.main_contact_mail(@contact).deliver_later
+        ContactMailer.item_contact_mail(@contact).deliver_later
       else
         render :index
       end  

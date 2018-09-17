@@ -12,4 +12,10 @@ class ContactMailer < ApplicationMailer
      mail(:to => "web.works.ms@gmail.com",
     :subject => "ホームページからお問い合わせがありました")
   end
+
+  def item_contact_mail(user)
+    @user = user
+     mail(:to => "web.works.ms@gmail.com",
+    :subject => "ホームページからお問い合わせがありました")
+  end
 end
