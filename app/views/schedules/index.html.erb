@@ -13,6 +13,7 @@
   <% else %>
     <p>現在予定はありません</p>
   <% end %>
+  <p class="ticket_reserve_text">チケット予約は<%= link_to("こちら", {:controller => :contacts, :action => :index}) %>から</p>
 </section>
 <section class="schedule_section">
   <h3>昼・夜会</h3>
@@ -28,7 +29,4 @@
   <% else %>
     <p>現在予定はありません</p>
   <% end %>
-</section>
-<section class="schedule_reserve">
-  <h3>チケット予約は<%= link_to("こちら", {:controller => :contacts, :action => :index}) %>から</h3>
 </section>

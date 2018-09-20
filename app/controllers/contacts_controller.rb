@@ -11,15 +11,21 @@ class ContactsController < ApplicationController
 
   def ticket_conf
     @t_contact = Contact.new
-    @name = params[:contact][:name]
-    @email = params[:contact][:email]
-    @date = params[:contact][:date]
-    @place = Schedule.find_by(date: @date)
-    @count = params[:contact][:count]
-    session[:name] = @name
-    session[:email] = @email
-    session[:date] = @date
-    session[:count] = @count
+    @schedule = Schedule.all.where(reservation: 0)
+    unless params[:contact][:date]
+      flash[:notice] = "日程が選択されておりません"
+      render :index
+    else
+      @name = params[:contact][:name]
+      @email = params[:contact][:email]
+      @date = params[:contact][:date]
+      @place = Schedule.find_by(date: @date)
+      @count = params[:contact][:count]
+      session[:name] = @name
+      session[:email] = @email
+      session[:date] = @date
+      session[:count] = @count
+    end
   end
 
   def ticket_thanks 

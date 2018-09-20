@@ -12,10 +12,15 @@ section.schedule_section {
 			}
 		}
 	}
+	p.ticket_reserve_text {
+		margin-top: 30px;
+	}
 }
 
 section {
-	&.schedule_details, &.schedule_reserve {
+	&.schedule_details {
 		margin-top: 40px;
 	}
 }
+
+
