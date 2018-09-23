@@ -41,6 +41,7 @@ window.addEventListener('turbolinks:load', function () {
   const main_nav = document.querySelector(".mainNavi");
   hamburger.addEventListener('click', function(){
     main_nav.classList.toggle("nav_open");
+    hamburger.querySelector("div").classList.toggle("hamburger_open")
   }, false);
   //hamberguar_menu
 }, false);
