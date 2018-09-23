@@ -7,6 +7,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
 
   <body>
@@ -19,6 +20,13 @@
       <% unless controller.controller_name == "sessions" || controller.controller_name == "registrations" %>
         <%= render :partial => "/shared/sidebar" %>
       <% end %>
+      <div class="nav-toggle">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
       <section class="main <% if controller.controller_name == "sessions" || controller.controller_name == "registrations"%>admin<% end %>"> 
         <%= yield %>
       </section>

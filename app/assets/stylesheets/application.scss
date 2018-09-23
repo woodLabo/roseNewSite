@@ -16,11 +16,11 @@
  */
 
 @mixin mintyo {
-	font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 }
 
 @mixin flex {
-	overflow: hidden; display: flex; justify-content: space-between; flex-wrap: wrap;
+  overflow: hidden; display: flex; justify-content: space-between; flex-wrap: wrap;
 }
 body, div, h1, h2, h3, ul, li, dl, dd, dt, img, hr, iframe, table, tr, th, td {
     margin: 0;
@@ -46,151 +46,242 @@ body {
 }
 
 a {
-	color: #fff; transition: .5s;
-	&:hover {
-		color: #f00;
-	}
+  color: #fff; transition: .5s;
+  &:hover {
+    color: #f00;
+  }
 }
 
 ul {
-	list-style-type: none;
+  list-style-type: none;
 }
 
 .center {
-	text-align: center;
+  text-align: center;
 }
 
 /* common */
 img {
-	max-width: 100%; height: auto;
+  max-width: 100%; height: auto;
 }
 
 div.flex_box {
-	@include flex;
-	> div {
-		width: 48%;
-	}
-	> div.thcal {
-		width: 32%;
-	}
+  @include flex;
+  > div {
+    width: 48%;
+  }
+  > div.thcal {
+    width: 32%;
+  }
 }
 
 div.align_start {
-	align-items: flex-start;
+  align-items: flex-start;
 }
 
 h1 {
-	@include mintyo; 
+  @include mintyo; 
 }
 
 h2 {
-	@include mintyo; font-size: 25px;  margin-bottom: 30px;
+  @include mintyo; font-size: 25px;  margin-bottom: 30px;
 }
 
 h3 {
-	@include mintyo; font-size: 20px; margin-bottom: 10px;
+  @include mintyo; font-size: 20px; margin-bottom: 10px;
 }
 
 .right {
-	text-align: right;
+  text-align: right;
 }
 
 /* html */
 html {
-	height: 100%
+  height: 100%
 }
 
 /* body */
 body {
-	position: relative; height: 100%;
+  position: relative; height: 100%;
 }
 
 /* header */
 header {
-	width: 100%; height: 100vh; position: absolute; z-index: -1;
-	h1 {
-		text-align: right;
-		img {
-			width: 70%;
-		}
-	}
+  width: 100%; height: 100vh; position: absolute; z-index: -1;
+  h1 {
+    text-align: right;
+    img {
+      width: 70%;
+    }
+  }
 }
 
 /* wrapper */
 div.wrapper {
-	@include flex;
+  @include flex;
 }
 
 section.main {
-	width: 60%; margin: 5% auto 0;
+  width: 60%; margin: 5% auto 0;
 }
 
 /* nav */
 nav.mainNavi {
-	width: 25%; text-align: right; margin-top: 4%;
-	ul {
-		li {
-			padding: 10px 20px; box-sizing: border-box; margin-bottom: 10px;
-			a {
-				text-decoration: none; @include mintyo; font-size: 150%; transition: .5s;
-				&:hover {
-					color: #f00;
-				}
-			}
-		}
-	}
-	ul.sns_area {
-		margin-top: 20px;
-		li {
-			display: inline-block; text-align: center; width: 30%;
-		}
-	}
+  width: 25%; text-align: right; margin-top: 4%;
+  ul {
+    li {
+      padding: 10px 20px; box-sizing: border-box; margin-bottom: 10px;
+      a {
+        text-decoration: none; @include mintyo; font-size: 150%; transition: .5s;
+        &:hover {
+          color: #f00;
+        }
+      }
+    }
+  }
+  ul.sns_area {
+    margin-top: 20px;
+    li {
+      display: inline-block; text-align: center; width: 30%;
+    }
+  }
 }
 
 /* footer */
 footer {
-	margin-top: 40px; text-align: center; width: 100%; padding-bottom: 10px; box-sizing: border-box;
-	span.footer {
-		@include mintyo;
-	}
+  margin-top: 40px; text-align: center; width: 100%; padding-bottom: 10px; box-sizing: border-box;
+  span.footer {
+    @include mintyo;
+  }
 }
 
 //admin
 div.wrapper {
-	> div.admin {
-		text-align: center;
-		div.actions {
-			margin: 10px 0;
-		}
-	}
+  > div.admin {
+    text-align: center;
+    div.actions {
+      margin: 10px 0;
+    }
+  }
 }
 
 
 //tab_change
 div.tab_nav_default {
-	background: #f00;
+  background: #f00;
 }
 section.tab_contents {
-	display: none;
-	&.tab_content_default {
-		display: block;
-	}
+  display: none;
+  &.tab_content_default {
+    display: block;
+  }
 }
 
 /* animation */
 .animation {
-	animation-fill-mode: both; animation-duration: .5s;
+  animation-fill-mode: both; animation-duration: .5s;
 }
 
 .fadeOut {
-	animation-name: fadeOut;
+  animation-name: fadeOut;
 }
 
 @keyframes fadeOut {
-	0% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-	}
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
+@media screen and (max-width: 1024px) {
+  nav.mainNavi {
+    ul.sns_area {
+      li {
+        padding: 0;
+      }
+    }
+  } 
+}
+// tablet landscape
+@media screen and (max-width: 768px) {
+  div.flex_box {
+    div.tweet_area, div.list_area {
+      width: 100%;
+    }
+    div.list_area {
+      margin-top: 20px;
+    }
+  }
+  nav.mainnavi {
+    ul.sns_area {
+      li {
+        width: 45%;
+      }
+    }
+  } 
+}
+//responsive sp
+@media screen and (max-width: 480px) {
+  //common
+  body {
+    font-size: 12px;
+  }
+  header {
+    h1 {
+      position: absolute; width: 100%; height: 80%; left: 0; right: 0; top: 0; bottom: 0; margin: auto;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  //side_menu
+  nav.mainNavi {
+    position: fixed; z-index: 2000; width: 70%; text-align: left; background: rgba(0, 0, 0, .8); top: 30px; transition: left .5s; left: -70%;
+    &.nav_open {
+      left: 0%;
+    }
+    ul {
+      li {
+        border-bottom: 1px solid #fff; margin-bottom: 0;
+        &:nth-of-type(1) {
+          border-top: 1px solid #fff;
+        }
+        a {
+          display: block; font-size: 120%;
+        }
+      }
+    }
+    ul.sns_area {
+      text-align: center; margin-top: 0;
+      li {
+        border: none; padding: 10px; width: 25%;
+      }
+    }
+    aside {
+      > p {
+        margin-top: 0;
+      }
+    }
+  }
+
+  div.nav-toggle {
+    position: fixed; top: 10px; left: 10px; cursor: pointer; z-index: 9999; 
+    span {
+      width: 40px; height: 3px; background: #fff; display: block; margin-bottom: 7px;
+    }
+  }
+
+  //main_content
+  section.main {
+    width: 95%;
+    div.tweet_area {
+      order: 2; width: 100%; box-sizing: border-box; padding: 10px;
+    }
+    div.list_area {
+      order: 1; width: 100%; padding: 0;
+    }
+  }
+}
+//responsive sp
