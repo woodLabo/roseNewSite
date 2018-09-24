@@ -5,7 +5,7 @@
 </head>
 <body>
   <%= @user.name %>様からお問い合わせです。<br>
-  <a href="mailto:<%= @user.email %>"><%= @user.email %></a><br>
+  メールアドレス:<a href="mailto:<%= @user.email %>"><%= @user.email %></a><br>
   お問い合わせ内容<br>
   <%= simple_format(@user.details) %>
 </body>
