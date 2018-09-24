@@ -1,11 +1,12 @@
+require 'date'
 require "uri"
 class SchedulesController < ApplicationController
   
   before_action :set_schedule, only: [:show, :edit]
 
   def index
-    @live = Schedule.all.where(types: "0").order("date ASC")
-    @meet = Schedule.all.where(types: "1")
+    @live = Schedule.all.where(types: "0").where("DATE(date) >= '#{Date.today}'").order("date ASC")
+    @meet = Schedule.all.where(types: "1").where("DATE(date) >= '#{Date.today}'").order("date ASC")
   end
 
   def show

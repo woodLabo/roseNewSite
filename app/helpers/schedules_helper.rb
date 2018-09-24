@@ -1,4 +1,5 @@
 module SchedulesHelper
+  #テキストの中にurlがあるとリンクを付ける
   def text_url_link_set text
     URI.extract(text, ['http']).uniq.each do |url|
       sub_text = ""
