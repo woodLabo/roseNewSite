@@ -283,5 +283,15 @@ section.tab_contents {
       order: 1; width: 100%; padding: 0;
     }
   }
+  section.release_types {
+    div.thcal {
+      a { 
+        background: none;
+        div {
+          display: none;
+        }
+      }
+    }
+  }
 }
 //responsive sp
