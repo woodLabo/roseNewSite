@@ -194,6 +194,19 @@ section.tab_contents {
     opacity: 0;
   }
 }
+
+input[type="submit"],input[type="reset"],input[type="button"]{
+  padding:10px 50px; background: none; border:1px solid #fff; color:#fff; transition: .5s;
+}
+
+input[type="submit"]:hover,input[type="reset"]:hover,input[type="button"]:hover{
+  background: #f00; cursor:pointer;
+}
+
+p.notice {
+  text-align: center; color: #f00; font-weight: bold;
+}
+
 @media screen and (max-width: 1024px) {
   nav.mainNavi {
     ul.sns_area {
