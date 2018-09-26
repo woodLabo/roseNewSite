@@ -3,51 +3,65 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @mixin mintyo {
-	font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 }
 
 article.news, article.lives {
-	position: relative; box-sizing: border-box; background: rgba(255,255,255, .2); padding: 10px; margin-bottom: 20px;
-	h2 {
-		font-size: 120%; @include mintyo;
-	}
-	ul.news_list, ul.lives_list {
-		padding: 10px;
-		li {
-			span.update_date, span.schedule_date {
-				display: inline-block; margin-right: 1em;
-			}
-		}
-	}
-	span.news_close {
-		position: absolute; right: 5%; cursor: pointer;
-	}
-	span.lives_close {
-		position: absolute; right: 5%; cursor: pointer;
-	}
+  position: relative; box-sizing: border-box; background: rgba(255,255,255, .2); padding: 10px; margin-bottom: 20px;
+  h2 {
+    font-size: 120%; @include mintyo;
+  }
+  ul.news_list, ul.lives_list {
+    padding: 10px;
+    li {
+      span.update_date, span.schedule_date {
+        display: inline-block; margin-right: 1em;
+      }
+    }
+  }
+  span.news_close {
+    position: absolute; right: 5%; cursor: pointer;
+  }
+  span.lives_close {
+    position: absolute; right: 5%; cursor: pointer;
+  }
 }
 
 div.what_details {
-	margin-top: 20px;
+  margin-top: 20px;
 }
 div#rose_pic {
-	text-align: center;
+  text-align: center;
 }
 
 div.details_box {
-	ul.details_list {
-		li {
-			margin-bottom: 10px;
-		}
-	}
+  ul.details_list {
+    li {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 div.tweet_area {
-	width: 45%; padding: 20px; box-sizing: border-box; background: rgba(255,255,255,.2); position: relative;
-	span.tweet_close {
-		position: absolute; right: 1%; top: 1%; cursor: pointer;
-	}
+  width: 45%; padding: 20px; box-sizing: border-box; background: rgba(255,255,255,.2); position: relative;
+  span.tweet_close {
+    position: absolute; right: 1%; top: 1%; cursor: pointer;
+  }
 }
 div.list_area {
-	width: 40%; box-sizing: box-sizing; padding: 0 10px;
+  width: 40%; box-sizing: box-sizing; padding: 0 10px;
+}
+
+//responsive sp
+@media screen and (max-width: 480px) {
+  div.flex_box {
+    > div {
+      &#rose_pic {
+        width: 100%;
+      }
+      &.details_box {
+        width: 100%;
+      }
+    }
+  }
 }

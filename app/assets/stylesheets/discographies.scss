@@ -2,47 +2,57 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 h2 {
-	span.release_number {
-		display: block; font-size: 80%;
-	}
+  span.release_number {
+    display: block; font-size: 80%;
+  }
 }
 section.release_types {
-	margin-bottom: 20px;
-	h2 {
-		font-size: 20px; margin-bottom: 10px;
-	}
-	div.thcal {
-		margin-bottom: 20px; text-align: center; position: relative; overflow: hidden;
-		a {
-			transform: .5s; display: block; position: absolute; top: -2em; text-align: center; width: 100%; right: 0; left: 0; margin: 0 auto; background: rgba(0,0,0,.7); height: 0%; text-decoration: none; transition: height 500ms 0s ease;
-			&:hover {
-				color: #fff;
-			}
-			> div {
-				display: flex; justify-content: center; align-items: center; width: 100%; height: 100%;
-			}
-		}
-		img {
-			width: 300px; cursor: pointer; 
-		}
-		&:hover {
-			a {
-				height: 100%; z-index: 9999; top: 0;
-			}
-		}
-	}
+  margin-bottom: 20px;
+  h2 {
+    font-size: 20px; margin-bottom: 10px;
+  }
+  div.thcal {
+    margin-bottom: 20px; text-align: center; position: relative; overflow: hidden;
+    a {
+      transform: .5s; display: block; position: absolute; top: -2em; text-align: center; width: 100%; right: 0; left: 0; margin: 0 auto; background: rgba(0,0,0,.7); height: 0%; text-decoration: none; transition: height 500ms 0s ease;
+      &:hover {
+        color: #fff;
+      }
+      > div {
+        display: flex; justify-content: center; align-items: center; width: 100%; height: 100%;
+      }
+    }
+    img {
+      width: 300px; cursor: pointer; 
+    }
+    &:hover {
+      a {
+        height: 100%; z-index: 9999; top: 0;
+      }
+    }
+  }
 }
 div.disco_section {
-	background: rgba(0,0,0,.7);
-	div.disco_img {
-		text-align: center;
-		img {
-			width: 300px;
-		}
-	}
-	div.disco_detail {
-		span.price {
-			display: inline-block; margin-left: 1em;
-		}
-	}
+  background: rgba(0,0,0,.7);
+  div.disco_img {
+    text-align: center;
+    img {
+      width: 300px;
+    }
+  }
+  div.disco_detail {
+    span.price {
+      display: inline-block; margin-left: 1em;
+    }
+  }
+}
+//responsive sp
+@media screen and (max-width: 480px) {
+  section.release_types {
+    div.flex_box {
+      > div {
+        width: 48%;
+      }
+    }
+  }
 }
