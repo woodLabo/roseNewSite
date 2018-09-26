@@ -1,5 +1,10 @@
 {
   "name": "vampirerose",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "heroku": "^7.16.0"
+  },
+  "devDependencies": {
+    "path": "^0.12.7"
+  }
 }
