@@ -7,6 +7,7 @@ class SchedulesController < ApplicationController
   def index
     @live = Schedule.all.where(types: "0").where("DATE(date) >= '#{Date.today}'").order("date ASC")
     @meet = Schedule.all.where(types: "1").where("DATE(date) >= '#{Date.today}'").order("date ASC")
+    @instore = Schedule.all.where(types: "3").where("DATE(date) >= '#{Date.today}'").order("date ASC")
   end
 
   def show
