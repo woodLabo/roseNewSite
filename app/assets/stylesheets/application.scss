@@ -119,6 +119,10 @@ header {
 /* wrapper */
 div.wrapper {
   @include flex;
+	// active_admin_hack
+	h2, h3, a {
+		color: #fff;
+	}
 }
 
 section.main {

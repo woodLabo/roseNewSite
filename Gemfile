@@ -43,6 +43,9 @@ gem "font-awesome-rails"
 
 #devise
 gem "devise"
+#active_admin
+gem "activeadmin"
+gem 'active_admin_flat_skin'
 
 #auto_prefixer
 gem "autoprefixer-rails"
