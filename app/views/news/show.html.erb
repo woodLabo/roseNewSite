@@ -1,5 +1,5 @@
 <h2><%= @news.title %></h2>
-<p><%= @news.detail %></p>
+<p><%= simple_format(@news.detail) %></p>
 <p>
   <%= @news.created_at.strftime("%m月%d日") %>
 </p>
