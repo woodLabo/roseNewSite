@@ -1,7 +1,7 @@
 <h2><%= @news.title %></h2>
 <p><%= simple_format(@news.detail) %></p>
-<p>
-  <%= @news.created_at.strftime("%m月%d日") %>
+<p class="news_update">
+  <%= @news.created_at.strftime("%m月%d日") %> Update
 </p>
 <p><%= link_to("戻る", :back) %>
 </p>
