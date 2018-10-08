@@ -3,7 +3,7 @@ class NewsController < ApplicationController
   before_action :news_set, only: [:show]
 
   def index
-    @news = News.all
+    @news = News.all.order("id DESC")
   end
 
   def show
