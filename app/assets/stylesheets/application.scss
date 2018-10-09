@@ -23,26 +23,26 @@
   overflow: hidden; display: flex; justify-content: space-between; flex-wrap: wrap;
 }
 body, div, h1, h2, h3, ul, li, dl, dd, dt, img, hr, iframe, table, tr, th, td {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font-weight: normal;
-    vertical-align: baseline;
-    background: transparent;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent;
 }
 
 table {
-    border-collapse: collapse;
-    boder-spacing: 0;
+  border-collapse: collapse;
+  boder-spacing: 0;
 }
 
 body {
-    background-color: #000;
-    color: #fff;
-    font-style: normal;
-    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-    font-size: 14px;
+  background-color: #000;
+  color: #fff;
+  font-style: normal;
+  font-size: 14px;
+  @include mintyo;
 }
 
 a {
@@ -119,10 +119,10 @@ header {
 /* wrapper */
 div.wrapper {
   @include flex;
-	// active_admin_hack
-	h2, h3, a {
-		color: #fff;
-	}
+  // active_admin_hack
+  h2, h3, a {
+    color: #fff;
+  }
 }
 
 section.main {
