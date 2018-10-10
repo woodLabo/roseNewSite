@@ -11,6 +11,11 @@ section.release_types {
   h2 {
     font-size: 20px; margin-bottom: 10px;
   }
+	div.flex_box {
+		&:after {
+			width: 32%; display: block; content: ""; height: 0;
+		}
+	}
   div.thcal {
     margin-bottom: 20px; text-align: center; position: relative; overflow: hidden;
     a {
