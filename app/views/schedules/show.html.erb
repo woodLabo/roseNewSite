@@ -8,10 +8,12 @@
 </p>
 
 <% if @schedule.types == 0 %>
-<section class="schedule_cast">
- <h2>出演</h2>
-  <%= simple_format(@schedule.appearances) %>
-</section>
+  <section class="schedule_cast">
+    <% if @schedule.appearances.present? %>
+      <h3>出演</h3>
+    <% end %>
+    <%= simple_format(@schedule.appearances) %>
+  </section>
 <% end %>
 
 <section class="schedule_details">

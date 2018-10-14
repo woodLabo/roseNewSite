@@ -50,6 +50,9 @@ gem 'active_admin_flat_skin'
 #auto_prefixer
 gem "autoprefixer-rails"
 
+#auto_link
+gem "rails_autolink"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
