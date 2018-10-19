@@ -23,13 +23,18 @@
     <article class="lives animation">
       <h2>Next Schedule</h2>
       <ul class="lives_list">
-        <% if @lives.present? %>
-          <li>
+        <li>
+          <% if @lives.present? %>
             <span class="schedule_date"><%= @lives.date.strftime("%m月%d日") %></span>
             <a href="schedules/<%= @lives.id %>"><%= @lives.place %></a>
-          </li>
-        <% end %>
+          <% else %>
+            現在予定はありません
+          <% end %>
+        </li>
       </ul>
     </article>
+    <div>
+      <%= link_to(image_tag("/images/v_cafe.jpg"), "http://r.gnavi.co.jp/g600100", {:target => "_blank"}) %>
+    </div>
   </div>
 </div>
