@@ -1,8 +1,9 @@
+require "date"
 class ContactsController < ApplicationController
 
   def index
     @t_contact = Contact.new
-    @schedule = Schedule.all.where(reservation: 0)
+    @schedule = Schedule.all.where(reservation: 0).where("DATE(date) >= '#{Date.today}'")
     @name = session[:name]
     @email = session[:email]
     @date = session[:date]
