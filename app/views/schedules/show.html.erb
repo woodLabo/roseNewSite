@@ -17,7 +17,7 @@
 <% end %>
 
 <section class="schedule_details">
-  <%= simple_format(text_url_link_set(@schedule.details)) %>
+  <%= auto_link(simple_format(@schedule.details), :all, :target => "_blank" ) %>
 </section>
 
 <p><%= link_to("戻る", :back) %>
