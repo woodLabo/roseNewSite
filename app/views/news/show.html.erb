@@ -1,5 +1,5 @@
 <h2><%= @news.title %></h2>
-<p><%= simple_format(@news.detail) %></p>
+<p><%= auto_link(simple_format(@news.detail), :all, :target => '_blank') %></p>
 <p class="news_update">
   <%= @news.created_at.strftime("%m月%d日") %> Update
 </p>
