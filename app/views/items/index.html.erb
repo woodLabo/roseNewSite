@@ -10,7 +10,12 @@
     <% @item_cd.each do |i| %>
       <div class="thcal">
         <%= image_tag("/images/#{i.img}") %>
-        <p><%= i.release_number %><br><%= i.title %><br>¥<%= number_with_delimiter(i.price) %></p>
+        <p><%= i.release_number %><br><%= i.title %><br>
+        <% if i.status.present? %>
+          <%= i.status %>
+        <% else %>
+          ¥<%= number_with_delimiter(i.price) %></p>
+      <% end %>
       </div>
     <% end %>
   </div>
